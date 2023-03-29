@@ -39,7 +39,27 @@ public class ArrayListUtilitiesTest {
 
         input = new ArrayList<String>(Arrays.asList("Cow","AtleyS","Pig","APCompSci","APCSA"));
         expectedOutput = new ArrayList<String>(Arrays.asList("Cow","Pig","APCSA"));
-        actualOutput = input;
+        actualOutput = ArrayListUtilities.removeLongWords(input);
         assertEquals(expectedOutput, actualOutput);
+    }
+    @Test
+    public void testReversed() {
+        ArrayList<Double> input;
+        ArrayList<Double> expectedOutput;
+        ArrayList<Double> actualOutput;
+
+        input = new ArrayList<Double>(Arrays.asList(2.2,3.3,4.4,5.5,6.6));
+        expectedOutput = new ArrayList<Double>(Arrays.asList(6.6,5.5,4.4,3.3,2.2));
+        actualOutput = ArrayListUtilities.reversed(input);
+    }
+    @Test
+    public void testReverseInPlace() {
+        ArrayList<Double> input;
+        ArrayList<Double> expectedOutput;
+        ArrayList<Double> actualOutput;
+
+        input = new ArrayList<Double>(Arrays.asList(2.2,3.3,4.4,5.5,6.6));
+        expectedOutput = new ArrayList<Double>(Arrays.asList(6.6,5.5,4.4,3.3,2.2));
+        actualOutput = ArrayListUtilities.reversed(input);
     }
 }

@@ -31,6 +31,20 @@ public class ArrayListUtilities {
     }
 
     public static ArrayList<Double> reversed(ArrayList<Double> items) {
-        
+        ArrayList<Double> result = new ArrayList<Double>();
+        for (int i = items.size()-1; i >= 0; i--) {
+            result.add(items.get(i));
+        }
+        return result;
+    }
+
+    public static void reverseInPlace(ArrayList<Double> items) {
+        ArrayList<Double> copy = new ArrayList<Double>();
+        for (int i = items.size()-1; i >= 0; i--) {
+            copy.add(items.get(i));
+        }
+        for (int i = 0; i < items.size(); i++) {
+            items.set(i, copy.get(i));
+        }
     }
 }
