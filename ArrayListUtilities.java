@@ -29,4 +29,8 @@ public class ArrayListUtilities {
             }
         }
     }
+
+    public static ArrayList<Double> reversed(ArrayList<Double> items) {
+        
+    }
 }
