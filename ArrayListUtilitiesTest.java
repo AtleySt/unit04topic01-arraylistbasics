@@ -38,7 +38,8 @@ public class ArrayListUtilitiesTest {
         ArrayList<String> actualOutput;
 
         input = new ArrayList<String>(Arrays.asList("Cow","AtleyS","Pig","APCompSci","APCSA"));
-        expectedOutput = new ArrayList<String>(Arrays.asList("Cow","Pig"));
+        expectedOutput = new ArrayList<String>(Arrays.asList("Cow","Pig", "APCSA"));
+        ArrayListUtilities.removeLongWords(input);
         actualOutput = input;
         assertEquals(expectedOutput, actualOutput);
     }
@@ -61,6 +62,7 @@ public class ArrayListUtilitiesTest {
 
         input = new ArrayList<Double>(Arrays.asList(2.2,3.3,4.4,5.5,6.6));
         expectedOutput = new ArrayList<Double>(Arrays.asList(6.6,5.5,4.4,3.3,2.2));
+        ArrayListUtilities.reverseInPlace(input);
         actualOutput = input;
         assertEquals(expectedOutput, actualOutput);
     }
